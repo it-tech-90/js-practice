@@ -55,3 +55,18 @@ console.log(`The even numbers are: ${printEvenNumbers(["1, 5, 64, 30, 31, 89, 5,
 //Can pass in a return value from another function as a parameter to the function
 //SO COOL! :D
 console.log(printSumEvenNumbers(printEvenNumbers(["1, 5, 64, 30, 31, 89, 5, 15, 18, 54, 69"]))); //166
+
+
+/* CREATE A LENGTH CONVERTER FUNCTION 
+////////////////////////////////////////////////
+// Create a function that takes in kilometers and returns the converted answer in miles
+//////////////////////////////////////////////// 
+*/
+
+//1 kilometer = 0.621371 miles
+
+const calcKilometer = (kilometer) => kilometer * 0.621371;
+
+console.log(calcKilometer(5))
+
+// Thought - potentially expand on this??? Too simple...
