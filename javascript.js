@@ -64,9 +64,55 @@ console.log(printSumEvenNumbers(printEvenNumbers(["1, 5, 64, 30, 31, 89, 5, 15, 
 */
 
 //1 kilometer = 0.621371 miles
-
+//Create the function
 const calcKilometer = (kilometer) => kilometer * 0.621371;
 
-console.log(calcKilometer(5))
+console.log(calcKilometer(5));
 
-// Thought - potentially expand on this??? Too simple...
+console.log("Math: " + 1 + 3);
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
+// FIRST TIME CREATING A CLASS
+////////////////////////////////////////////////
+
+//Initiate a class & define properties
+class VETSworker {
+    //Creating the constructor w/ args to receive in order to create the class
+    constructor(fname, lname, worksHere) {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.works = worksHere;
+    }
+
+    //Getter to grab the first and last name
+    get name() {
+            return this.firstName + ' ' + this.lastName;
+        }
+        //Method call in the class
+    isWorkerHere() {
+        if (this.works === true) {
+            console.log(`Yes, ${this.firstName} ${this.lastName} works here!`);
+            return true;
+        } else {
+            console.log(`Nope, they don't work here.`);
+            return false;
+        }
+    }
+}
+
+//Creating a new object from the newly created class
+const Spence = new VETSworker('Spencer', 'Reed', true);
+
+//Driving an IF statement based on the answer from the method call
+if (!Spence.isWorkerHere()) {
+    console.log("Awe damn!");
+} else {
+    console.log("Sweet!");
+}
