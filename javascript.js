@@ -72,13 +72,6 @@ console.log(calcKilometer(5));
 
 console.log("Math: " + 1 + 3);
 
-
-
-
-
-
-
-
 /////////////////////////////////////////////////
 // FIRST TIME CREATING A CLASS
 ////////////////////////////////////////////////
@@ -147,13 +140,14 @@ console.log(minuteConverter(5));
 
 
 const numberAdd = function(number) {
-    let count = 0;
-    let sum = [];
-    for (let i = 0; i < number; i++) {
-        count = number - i;
-        sum.push(count);
+    let count = 0; //Counter to keep track of numbers
+    let sum = []; //Our array that will give us the sum
+    for (let i = 0; i < number; i++) { //Use this to loop the amount of the number given
+        count = number - i; // Each iteration will subtract from the number
+        sum.push(count); //Pushing each iteration result into the array
     }
-    return sum.reduce((a, b) => a + b, 0);
+    return sum.reduce((a, b) => a + b, 0); // The reduce() function will iterate through each number and add the current
+    //array value to the result from the previous step
 }
 
 console.log(numberAdd(600));
