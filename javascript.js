@@ -96,7 +96,7 @@ class VETSworker {
             return this.firstName + ' ' + this.lastName;
         }
         //Method call in the class
-    isWorkerHere() {
+    isVETSemployee() {
         if (this.works === true) {
             console.log(`Yes, ${this.firstName} ${this.lastName} works here!`);
             return true;
@@ -111,7 +111,7 @@ class VETSworker {
 const Spence = new VETSworker('Spencer', 'Reed', true);
 
 //Driving an IF statement based on the answer from the method call
-if (!Spence.isWorkerHere()) {
+if (!Spence.isVETSemployee()) {
     console.log("Awe damn!");
 } else {
     console.log("Sweet!");
