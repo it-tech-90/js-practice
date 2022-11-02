@@ -59,7 +59,8 @@ console.log(printSumEvenNumbers(printEvenNumbers(["1, 5, 64, 30, 31, 89, 5, 15, 
 
 /* CREATE A LENGTH CONVERTER FUNCTION 
 ////////////////////////////////////////////////
-// Create a function that takes in kilometers and returns the converted answer in miles
+// Create a function that takes in kilometers and 
+//  returns the converted answer in miles
 //////////////////////////////////////////////// 
 */
 
@@ -116,3 +117,43 @@ if (!Spence.isVETSemployee()) {
 } else {
     console.log("Sweet!");
 }
+
+
+///////////////////////////////////////////////////////////////
+//CONVERT MINUTES INTO SECONDS
+//
+// Copied and modified from https://edabit.com/challenge/8q54MKnRrm89pSLmW
+// Instructions:
+//  Simple - create a function that takes in minutes and returns
+//  the answer in seconds
+/////////////////////////////////////////////////////////////////
+
+const minuteConverter = function(minutes) {
+    return minutes * 60;
+}
+
+console.log(minuteConverter(5));
+
+//////////////////////////////////////////////////////////////////
+//ADD UP NUMBERS FROM A SINGLE NUMBER
+//
+// Copied from https://edabit.com/challenge/4gzDuDkompAqujpRi
+// Instructions:
+// Create a function that takes a number as an argument. Add up
+//  all the numbers from 1 to the number passed to the function.
+// EXAMPLE: If 4 is passed the function should return 10
+//  because 1 + 2 + 3 + 4 = 10
+//////////////////////////////////////////////////////////////////
+
+
+const numberAdd = function(number) {
+    let count = 0;
+    let sum = [];
+    for (let i = 0; i < number; i++) {
+        count = number - i;
+        sum.push(count);
+    }
+    return sum.reduce((a, b) => a + b, 0);
+}
+
+console.log(numberAdd(600));
