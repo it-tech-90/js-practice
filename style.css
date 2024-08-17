@@ -1,7 +1,8 @@
 body {
-    display:block;
+    /* display:block; */
     background: linear-gradient(to top left, #288fb4, #7f29c6);
     margin: 0;
+    height: 100vh;
 }
 
 .body {
@@ -9,7 +10,8 @@ body {
     display: flex;
     align-items: center; 
     justify-content: center;
-    
+    flex-direction: column;
+    width: 100%;
 }
 
 h1 {
@@ -20,8 +22,16 @@ h1 {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .row {
+    flex: 1;
 }
 
 .column h2 {
@@ -34,15 +44,42 @@ h1 {
 .row {
     display: flex;
     width: 100%;
-    flex-direction: row;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .column {
+    display: flex;
     flex: 1;
     padding: .5em;
     box-sizing: border-box;
     max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+}
+
+.m2 {
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+.m2-t {
+    margin-top: 2em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: .25em;
 }
 
 #shadow {

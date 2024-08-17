@@ -194,3 +194,32 @@ const numberAdd = function(number) {
 }
 
 console.log(numberAdd(600));
+
+
+//////////////////////////////////////////////////////////////////
+// Doing stuff with buttons and elements on the page
+//////////////////////////////////////////////////////////////////
+
+function doSomething() {
+    document.getElementById('shadow').style.boxShadow="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+}
+
+function doSomething2() {
+    document.getElementById('shadow').style.boxShadow="rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px";
+}
+
+function rainbowBox() {
+    document.getElementById('shadow').style.boxShadow="blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px";
+}
+
+function rainbowBox2() {
+    document.getElementById('shadow').style.boxShadow="rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px";
+}
+
+function roundShadow() {
+    document.getElementById('shadow').style.boxShadow="rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px";
+}
+
+function revertBox() {
+    document.getElementById('shadow').style.boxShadow="0 4px 8px rgba(0, 0, 0, 0.5)";
+}
