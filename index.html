@@ -5,29 +5,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript Practice</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>HTML & JavaScript Practice</title>
     <style>
-        body {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(to top left, #288fb4, #7f29c6);
-        }
-        
-        h1 {
-            font-family: sans-serif;
-            font-size: 50px;
-            line-height: 1.3;
-            width: 100%;
-            padding: 30px;
-            text-align: center;
-            color: white;
-        }
+    
     </style>
 </head>
 
 <body>
+    <div class="container">
     <h1>Some stuff here....</h1>
+        
+        <!--Breaking the flex items in the page-->
+        <div class="break"></div>
+
+    <table>
+        <tr>
+            <th><h2>Favorite</h2></th>
+            <th><h2>Not-so-favorite</h2></th>
+        </tr>
+        <tr>
+            <td>
+                <span><h4>Family</h4></span>
+                <span><img class="imageLink" src="https://thumbs.dreamstime.com/b/portrait-four-member-happy-family-posing-together-parents-wi-kids-93774342.jpg" alt="Family illustration" style="max-width: 250px;"></span>
+                <span>
+                    <ul>
+                        <li>Always there to provide support and love</li>
+                        <li>Great conversations and collaborations</li>
+                    </ul>
+                </span>
+            </td>
+            <td>
+                <span><h4>Traffic</h4></span>
+                <span><img class="imageLink" src="https://media.istockphoto.com/id/155287967/photo/cars-in-rush-hour-with-traffic-at-dawn.jpg?s=612x612&w=0&k=20&c=tDAaJQMHIh6nFDr0rJlD44tEtmj2srdpoSTKL7C5SGE=" alt="Traffic on highway" style="max-width: 250px;"></span>
+                <span>
+                    <ul>
+                        <li>Takes a lot of time</li>
+                        <li>Waste of gas</li>
+                        <li>Adds to my anxiety</li>
+                    </ul>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span><h4>Video Games</h4></span>
+                <span><img class="imageLink" src="https://cdn.pixabay.com/photo/2016/06/29/14/17/joystick-1486908_640.png" alt="Video game controller illustration"></span>
+                <span>
+                    <ul>
+                        <li>Escape from reality</li>
+                        <li>Fun and engaging</li>
+                        <li>Helps pass time</li>
+                    </ul>
+                </span>
+            </td>
+            <td>
+                <span><h4>Homework</h4></span>
+                <span><img class="imageLink" src="https://community.thriveglobal.com/wp-content/uploads/2019/03/shutterstock_310700672.jpg" alt="Homework with supplies"></span>
+                <span>
+                    <ul>
+                        <li>Bleeds into my video game time</li>
+                        <li>Never engaging</li>
+                        
+                    </ul>
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
     <script src="javascript.js"></script>
 </body>
 

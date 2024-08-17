@@ -17,7 +17,7 @@ function printEvenNumbers(arr) {
     let evenNumbers = [];
     let numbers = [];
     //Grabbing the type of the array just for checksies :)
-    console.log(typeof arr + " " + arr);
+    //console.log(typeof arr + " " + arr);
     //Recognizes arrays as an object
     //Checking if the type is object (assuming a string) & converting to int
     if (typeof arr === 'object') {
@@ -25,7 +25,8 @@ function printEvenNumbers(arr) {
     };
     //Had to start logging things like this when I was getting 'undefined' or something entirely different
     //Still an object :D
-    console.log(`Numbers are: ${typeof numbers} - ${numbers}`);
+    //console.log(`Numbers are: ${typeof numbers} - ${numbers}`);
+
     //Iterating through each value and checking if the result is even
     //Then passing to a new array to return
     numbers.forEach(function(number) {
@@ -65,12 +66,13 @@ console.log(printSumEvenNumbers(printEvenNumbers(["1, 5, 64, 30, 31, 89, 5, 15, 
 */
 
 //1 kilometer = 0.621371 miles
-//Create the function
-const calcKilometer = (kilometer) => kilometer * 0.621371;
+//Create the function to calculate kilometers to miles
+const calcKilometer = (kilometer) => kilometer * 0.621371; //Shorthand function creation
 
-console.log(calcKilometer(5));
+console.log(`10 kilometers is: ${calcKilometer(10)} miles.`);
 
-console.log("Math: " + 1 + 3);
+//Showcasing type coercion with string objects
+console.log("Math: " + 1 + 3); //result: Math: 13
 
 /////////////////////////////////////////////////
 // FIRST TIME CREATING A CLASS
@@ -111,6 +113,8 @@ if (!Spence.isVETSemployee()) {
     console.log("Sweet!");
 }
 
+console.log(Spence.name);
+
 
 ///////////////////////////////////////////////////////////////
 //CONVERT MINUTES INTO SECONDS
@@ -121,11 +125,12 @@ if (!Spence.isVETSemployee()) {
 //  the answer in seconds
 /////////////////////////////////////////////////////////////////
 
+//Converting minutes to seconds
 const minuteConverter = function(minutes) {
     return minutes * 60;
 }
 
-console.log(minuteConverter(5));
+console.log(minuteConverter(5) + ' seconds');
 
 //////////////////////////////////////////////////////////////////
 //ADD UP NUMBERS FROM A SINGLE NUMBER
@@ -147,7 +152,7 @@ const numberAdd = function(number) {
         sum.push(count); //Pushing each iteration result into the array
     }
     return sum.reduce((a, b) => a + b, 0); // The reduce() function will iterate through each number and add the current
-    //array value to the result from the previous step
+    //array index value to the result from the previous step
 }
 
-console.log(numberAdd(600));
+console.log(numberAdd(4));
