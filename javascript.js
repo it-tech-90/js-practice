@@ -89,6 +89,46 @@ class VETSworker {
     get name() {
             return this.firstName + ' ' + this.lastName;
         }
+    
+    get age() {
+        if(!this._birthYear) {
+            throw new Error("No birth year set for user.");
+        } else {
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth() + 1;
+
+            let age = currentYear - this._birthYear;
+
+            if(currentMonth < this._birthMonth) {
+                age -= 1;
+            }
+            return age;
+        }
+    }
+
+    set birthYear(year) {
+        if (!year) {
+            throw new Error("Invalid parameter");
+        } else {
+            this._birthYear = year;
+        }
+    }
+
+    set birthMonth(month) {
+        if(!month) {
+            throw new Error("Invalid parameter");
+        } else {
+            const lowerMonth = month.toLowerCase();
+            const validMonths = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+
+            if (validMonths.includes(lowerMonth)) {
+                this._birthMonth = month.charAt(0).toUpperCase() + monthLower.slice(1);
+            } else {
+                throw new Error("Invalid birth month provided");
+            }
+        }
+    }
         //Method call in the class
     isVETSemployee() {
         if (this.works === true) {
@@ -106,9 +146,12 @@ const Spence = new VETSworker('Spencer', 'Reed', true);
 
 //Driving an IF statement based on the answer from the method call
 if (!Spence.isVETSemployee()) {
-    console.log("Awe damn!");
+    console.log(Spence.name + " does not work here.");
 } else {
-    console.log("Sweet!");
+    console.log(Spence.name + " does, in fact, work here.");
+    Spence.birthYear = 1990;
+    console.log(Spence._birthYear)
+    console.log(Spence.age);
 }
 
 
